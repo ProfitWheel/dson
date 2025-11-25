@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Benchmark outputs
+benchmarks/results/*.log
+benchmarks/results/*.csv
+benchmarks/results/*.db
+benchmark_*.txt
+benchmark_*.log
+benchmark_*.csv
+benchmarks.db
+
+# Test outputs
+test_output.txt
+.pytest_cache/
+
+# OS
+.DS_Store
+Thumbs.db

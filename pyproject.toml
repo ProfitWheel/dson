@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dson"
+version = "0.1.0"
+description = "DSON: Dense Sequence Object Notation - A token-efficient drop-in replacement for JSON in LLM workflows."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "User", email = "user@example.com"}
+]
+dependencies = [
+    "pydantic>=2.0.0"
+]
+
+[project.optional-dependencies]
+langchain = ["langchain>=0.1.0"]
+llamaindex = ["llama-index>=0.10.0"]
+benchmark = ["openai", "pandas", "tabulate", "python-dotenv"]
+all = ["dson[langchain,llamaindex,benchmark]"]
+
+[project.scripts]
+dson-migrate = "dson.cli.migrate:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
