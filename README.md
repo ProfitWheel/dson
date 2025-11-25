@@ -39,16 +39,14 @@ Extract user data.
 """
 
 # Parse LLM response
-llm_output = "%USE|1|Alice|admin|editor||"
-0user = dson.parse(llm_output, User)
+llm_output = "%D|1|Alice|admin|editor||"
+user = dson.parse(llm_output, User)
 print(user.name)  # Alice
 ```
 
 ## Why DSON?
 
 **30-50% Output Token Savings** - Optimized for LLM data extraction tasks
-
-### ⚡ Benchmark Metrics
 
 The benchmark measures DSON's performance in **extraction tasks** where LLMs convert raw data (CSV, text, tables) into structured formats.
 

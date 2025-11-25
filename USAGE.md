@@ -34,7 +34,7 @@ You are a data extractor.
 Parse the LLM response string directly into your object.
 
 ```python
-llm_output = "%USR|1|Alice|admin|editor||"
+llm_output = "%D|1|Alice|admin|editor||"
 user = dson.parse(llm_output, User)
 print(user.name) # Alice
 ```

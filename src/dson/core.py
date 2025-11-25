@@ -6,12 +6,8 @@ from .parser import parse_dson
 T = TypeVar("T", bound=BaseModel)
 
 def _generate_tag(model: Type[BaseModel]) -> str:
-    """Auto-generate 3 letter tag from class name."""
-    name = model.__name__.upper()
-    if len(name) >= 3:
-        return f"%{name[:3]}"
-    else:
-        return f"%{name.ljust(3, 'X')}"
+    """Return standard DSON tag."""
+    return "%D"
 
 def format_instructions(model: Type[BaseModel], tag: str = None) -> str:
     """Generate DSON format instructions for a Pydantic model."""
